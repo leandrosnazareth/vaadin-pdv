@@ -1,0 +1,135 @@
+/* Shared Styles */
+
+/* Utility styles for the application */
+html {
+    --lumo-color-primary: #2563eb;
+    --lumo-color-primary-50pct: rgba(37, 99, 235, 0.5);
+    --lumo-color-primary-10pct: rgba(37, 99, 235, 0.1);
+}
+
+/* Global styles */
+body {
+    font-family: var(--lumo-font-family);
+    margin: 0;
+    padding: 0;
+}
+
+/* Common card styles */
+.card {
+    background: var(--lumo-base-color);
+    border-radius: var(--lumo-border-radius-m);
+    box-shadow: var(--lumo-box-shadow-xs);
+    padding: var(--lumo-space-m);
+}
+
+/* Common button styles */
+.primary-button {
+    background: var(--lumo-primary-color);
+    color: var(--lumo-primary-contrast-color);
+    border: none;
+    border-radius: var(--lumo-border-radius-m);
+    padding: var(--lumo-space-s) var(--lumo-space-m);
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.primary-button:hover {
+    background: var(--lumo-primary-color-50pct);
+}
+
+/* Layout utilities */
+.flex {
+    display: flex;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.gap-s {
+    gap: var(--lumo-space-s);
+}
+
+.gap-m {
+    gap: var(--lumo-space-m);
+}
+
+.gap-l {
+    gap: var(--lumo-space-l);
+}
+
+/* Text utilities */
+.text-center {
+    text-align: center;
+}
+
+.text-primary {
+    color: var(--lumo-primary-color);
+}
+
+.text-secondary {
+    color: var(--lumo-secondary-text-color);
+}
+
+.font-bold {
+    font-weight: var(--lumo-font-weight-bold);
+}
+
+/* Spacing utilities */
+.m-s { margin: var(--lumo-space-s); }
+.m-m { margin: var(--lumo-space-m); }
+.m-l { margin: var(--lumo-space-l); }
+
+.p-s { padding: var(--lumo-space-s); }
+.p-m { padding: var(--lumo-space-m); }
+.p-l { padding: var(--lumo-space-l); }
+
+.mb-s { margin-bottom: var(--lumo-space-s); }
+.mb-m { margin-bottom: var(--lumo-space-m); }
+.mb-l { margin-bottom: var(--lumo-space-l); }
+
+.mt-s { margin-top: var(--lumo-space-s); }
+.mt-m { margin-top: var(--lumo-space-m); }
+.mt-l { margin-top: var(--lumo-space-l); }
+
+/* Size utilities */
+.w-full { width: 100%; }
+.h-full { height: 100%; }
+
+/* Border radius utilities */
+.rounded { border-radius: var(--lumo-border-radius-m); }
+.rounded-l { border-radius: var(--lumo-border-radius-l); }
+
+/* Shadow utilities */
+.shadow-xs { box-shadow: var(--lumo-box-shadow-xs); }
+.shadow-s { box-shadow: var(--lumo-box-shadow-s); }
+.shadow-m { box-shadow: var(--lumo-box-shadow-m); }
+.shadow-l { box-shadow: var(--lumo-box-shadow-l); }
+
+/* Background utilities */
+.bg-primary { background: var(--lumo-primary-color); }
+.bg-contrast { background: var(--lumo-contrast-5pct); }
+.bg-base { background: var(--lumo-base-color); }
+
+/* Responsive utilities */
+@media (max-width: 768px) {
+    .mobile-stack {
+        flex-direction: column;
+    }
+    
+    .mobile-full {
+        width: 100%;
+    }
+}

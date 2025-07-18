@@ -1,0 +1,181 @@
+/* Estilos para o menu lateral (Sidebar) */
+
+/* Container principal do drawer */
+vaadin-app-layout[drawer-opened] [part="drawer"] {
+    background: linear-gradient(135deg, var(--lumo-primary-color) 0%, var(--lumo-primary-color-50pct) 100%);
+    box-shadow: 2px 0 20px rgba(0, 0, 0, 0.1);
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Header do sidebar */
+.sidebar-header {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    margin: var(--lumo-space-s);
+    padding: var(--lumo-space-m);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.sidebar-header:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.15);
+}
+
+.sidebar-logo {
+    color: white !important;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+    transition: transform 0.3s ease;
+}
+
+.sidebar-header:hover .sidebar-logo {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.sidebar-title {
+    color: black !important;
+    font-weight: 700 !important;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    letter-spacing: 0.5px;
+}
+
+/* Navegação lateral */
+vaadin-side-nav {
+    --vaadin-side-nav-item-background-color: transparent;
+    --vaadin-side-nav-item-background-color-hover: rgba(255, 255, 255, 0.1);
+    --vaadin-side-nav-item-background-color-active: rgba(255, 255, 255, 0.2);
+    --vaadin-side-nav-item-text-color: rgba(255, 255, 255, 0.9);
+    --vaadin-side-nav-item-text-color-hover: white;
+    --vaadin-side-nav-item-text-color-active: white;
+    --vaadin-side-nav-item-icon-color: rgba(255, 255, 255, 0.8);
+    --vaadin-side-nav-item-icon-color-hover: white;
+    --vaadin-side-nav-item-icon-color-active: white;
+}
+
+vaadin-side-nav-item {
+    border-radius: 10px;
+    margin: 4px 0;
+    padding: 2px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+vaadin-side-nav-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.6s;
+}
+
+vaadin-side-nav-item:hover::before {
+    left: 100%;
+}
+
+vaadin-side-nav-item:hover {
+    transform: translateX(4px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+vaadin-side-nav-item[selected] {
+    background: rgba(255, 255, 255, 0.25) !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    transform: translateX(4px);
+}
+
+/* Menu do usuário */
+.user-menu {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    margin: var(--lumo-space-s);
+    padding: var(--lumo-space-xs);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.user-menu:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.15);
+}
+
+.user-menu vaadin-menu-bar {
+    --vaadin-menu-bar-background-color: transparent;
+    --vaadin-menu-bar-item-text-color: white;
+    --vaadin-menu-bar-item-background-color-hover: rgba(255, 255, 255, 0.1);
+    --vaadin-menu-bar-item-background-color-focus: rgba(255, 255, 255, 0.1);
+}
+
+.user-menu vaadin-avatar {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.user-menu:hover vaadin-avatar {
+    transform: scale(1.05);
+}
+
+/* Scrollbar personalizada */
+vaadin-scroller {
+    --lumo-contrast-10pct: rgba(255, 255, 255, 0.1);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .sidebar-header {
+        margin: var(--lumo-space-xs);
+        padding: var(--lumo-space-s);
+    }
+    
+    .sidebar-title {
+        font-size: var(--lumo-font-size-m);
+    }
+}
+
+/* Animação suave para abertura/fechamento */
+vaadin-app-layout [part="drawer"] {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Overlay melhorado para mobile */
+vaadin-app-layout [part="overlay"] {
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+}
+
+/* Efeito de brilho sutil */
+@keyframes shimmer {
+    0% {
+        background-position: -200% 0;
+    }
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+.sidebar-header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    background-size: 200% 100%;
+    animation: shimmer 3s ease-in-out infinite;
+    border-radius: 12px;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.sidebar-header:hover::after {
+    opacity: 1;
+}

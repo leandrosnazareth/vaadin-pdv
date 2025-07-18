@@ -1,0 +1,75 @@
+/* Estilos para a página de Histórico de Vendas */
+
+/* Grid de vendas com melhor espaçamento */
+.vendas-grid {
+    border-radius: var(--lumo-border-radius-m);
+    box-shadow: var(--lumo-box-shadow-xs);
+    background: var(--lumo-base-color);
+}
+
+/* Badges de status das vendas */
+.status-badge {
+    border-radius: var(--lumo-border-radius-s);
+    padding: var(--lumo-space-xs) var(--lumo-space-s);
+    font-size: var(--lumo-font-size-s);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+}
+
+.status-badge.finalizada {
+    background: var(--lumo-success-color-10pct);
+    color: var(--lumo-success-color);
+}
+
+.status-badge.cancelada {
+    background: var(--lumo-error-color-10pct);
+    color: var(--lumo-error-color);
+}
+
+.status-badge.pendente {
+    background: var(--lumo-contrast-10pct);
+    color: var(--lumo-contrast-70pct);
+}
+
+/* Filtros responsivos */
+@media (max-width: 768px) {
+    .vendas-filtros {
+        flex-direction: column;
+        gap: var(--lumo-space-s);
+    }
+    
+    .vendas-filtros > * {
+        width: 100% !important;
+    }
+}
+
+/* Animações suaves */
+.vendas-grid vaadin-grid-cell-content {
+    transition: all 0.2s ease;
+}
+
+.vendas-grid vaadin-grid-cell-content:hover {
+    background: var(--lumo-contrast-5pct);
+}
+
+/* Indicador de valor total */
+.total-vendas {
+    padding: var(--lumo-space-m);
+    background: linear-gradient(135deg, var(--lumo-primary-color-10pct), var(--lumo-success-color-10pct));
+    border-radius: var(--lumo-border-radius-m);
+    border: 1px solid var(--lumo-contrast-10pct);
+}
+
+/* Melhorias para dispositivos móveis */
+@media (max-width: 600px) {
+    .vendas-toolbar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .vendas-toolbar .toolbar-actions {
+        margin-top: var(--lumo-space-s);
+        justify-content: space-between;
+    }
+}
