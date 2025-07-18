@@ -487,8 +487,8 @@ Agradecimentos especiais a:
 
 ### Contato e Suporte
 
-**Email**: [leandro@nazareth.dev](mailto:leandro@nazareth.dev)  
-**LinkedIn**: [leandrosnazareth](https://linkedin.com/in/leandrosnazareth)  
+**Email**: [leandrosnazareth@gmail.com](mailto:leandrosnazareth@gmail.com)  
+**LinkedIn**: [leandrosnazareth](https://www.linkedin.com/in/leandrosnazareth/)  
 **GitHub**: [leandrosnazareth](https://github.com/leandrosnazareth)
 
 ---
