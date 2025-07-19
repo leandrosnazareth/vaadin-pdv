@@ -144,20 +144,24 @@ Demonstrar as capacidades do **Vaadin Framework** na criação de aplicações e
 ## 🖼️ Screenshots
 
 ### Dashboard Principal
-![Dashboard](docs/images/dashboard.png)
+![Dashboard](1.png)
 *Dashboard executivo com estatísticas em tempo real*
 
 ### Tela de PDV
-![PDV](docs/images/pdv.png)
+![PDV](2.png)
 *Interface principal do ponto de venda com busca de produtos e carrinho*
 
 ### Gestão de Produtos
-![Produtos](docs/images/produtos.png)
+![Produtos](3.png)
 *Módulo completo de gestão de produtos com busca e filtros avançados*
 
 ### Histórico de Vendas
-![Vendas](docs/images/vendas.png)
+![Vendas](4.png)
 *Consulta detalhada do histórico de vendas com filtros por período*
+
+### Login
+![Login](5.png)
+*Login de usuário*
 
 ---
 
